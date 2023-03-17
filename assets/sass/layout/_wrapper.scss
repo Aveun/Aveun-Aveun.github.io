@@ -1,0 +1,29 @@
+///
+/// Hyper by Aveun
+///
+/// Free for personal and commercial use under the CCA 3.0 license
+///
+/* Wrapper (main) */
+
+	#wrapper {
+		#sidebar + & {
+			margin-left: _size(sidebar-width);
+
+			@include breakpoint('<=large') {
+				margin-left: 0;
+				padding-top: _size(sidebar-height);
+			}
+
+			@include breakpoint('<=small') {
+				padding-top: 0;
+			}
+		}
+
+		#header + & {
+			> .wrapper {
+				> .inner {
+					margin: 0 auto;
+				}
+			}
+		}
+	}
